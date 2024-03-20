@@ -21,9 +21,6 @@ my_cosmos_dag = DbtDag(
     execution_config=ExecutionConfig(
         dbt_executable_path=f"{os.environ['AIRFLOW_HOME']}/dbt_venv/bin/dbt",
     ),
-    render_config=RenderConfig(
-        emit_datasets=True,
-    )
     # normal dag parameters
     schedule_interval="@daily",
     start_date=datetime(2023, 1, 1),
